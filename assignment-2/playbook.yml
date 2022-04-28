@@ -1,0 +1,6 @@
+- hosts: all
+  become: true
+  name: play 1
+  tasks:
+    - name: custom
+      script: custom_script.sh

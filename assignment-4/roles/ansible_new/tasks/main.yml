@@ -1,0 +1,6 @@
+# tasks file for ansible_new
+- include: apache2.yml
+  when: install == "apache2"
+
+- include: nginx.yml
+  when: install == "nginx"

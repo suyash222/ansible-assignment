@@ -1,0 +1,19 @@
+- hosts: slave1
+  become: true
+  name: play 1
+  tasks:
+    - name: install java
+      apt:
+        name: openjdk-11-jdk
+        state: present
+        update_cache: true
+
+- hosts: slave2
+  become: true
+  name: play 2
+  tasks:
+    - name: install java
+      apt:
+        name: mysql-server
+        state: present
+        update_cache: true

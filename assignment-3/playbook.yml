@@ -1,0 +1,12 @@
+# file main.yml
+- hosts: slave1
+  become: true
+  roles:
+    - role: ansible_new
+      install: "apache2" 
+
+- hosts: slave2
+  become: true
+  roles:
+    - role: ansible_new
+      install: "nginx"
